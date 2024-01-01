@@ -47,6 +47,7 @@ namespace EventHub.Events.Registrations
                 EndTime = @event.EndTime,
                 Location = @event.IsOnline ? "Online" : $"{@event.City}, {@event.CountryName}"
             };
+            //TODO:邮件模板
 
             await _emailSender.QueueAsync(
                 user.Email,
