@@ -67,7 +67,7 @@ namespace EventHub.Admin.Controllers.Organizations
             {
                 return null;
             }
-            
+            //todo:注意这里的代码
             Response.Headers.Add("Accept-Ranges", "bytes");
             Response.ContentType = remoteStreamContent.ContentType;
 
