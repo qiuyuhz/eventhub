@@ -11,6 +11,9 @@ namespace EventHub.Admin.Users
     [Authorize(EventHubPermissions.Users.Default)]
     public class UserAppService : EventHubAdminAppService, IUserAppService
     {
+        /*
+        提取用户信息
+        */
         private readonly IUserRepository _userRepository;
 
         public UserAppService(IUserRepository userRepository)

@@ -334,7 +334,7 @@ namespace EventHub.Events
         {
             var @event = await _eventRepository.GetAsync(id);
             await CheckIfValidOwnerAsync(@event);
-            
+            //TODO:可能有商业逻辑判断,建议迁移到EventManager里面
             @event.AddSession(
                 trackId,
                 GuidGenerator.Create(),
