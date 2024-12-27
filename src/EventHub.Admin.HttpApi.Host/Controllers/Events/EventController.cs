@@ -59,7 +59,7 @@ namespace EventHub.Admin.Controllers.Events
         {
             return _eventAppService.GetListAsync(input);
         }
-
+        //todo:[FromForm]特性
         [HttpPut]
         public Task UpdateAsync(Guid id, [FromForm] UpdateEventDto input)
         {

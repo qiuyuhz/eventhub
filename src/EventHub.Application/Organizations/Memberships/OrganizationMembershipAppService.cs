@@ -35,7 +35,7 @@ namespace EventHub.Organizations.Memberships
         {
             await _organizationMembershipManager.JoinAsync(
                 await _organizationRepository.GetAsync(organizationId),
-                await _userRepository.GetAsync(CurrentUser.GetId())
+                await _userRepository.GetAsync(CurrentUser.GetId())     //todo:从数据库重新取数据，是不是多余的？
             );
         }
         

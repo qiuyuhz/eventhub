@@ -47,7 +47,8 @@ namespace EventHub.Events.Registrations
                 EndTime = @event.EndTime,
                 Location = @event.IsOnline ? "Online" : $"{@event.City}, {@event.CountryName}"
             };
-
+            //TODO:邮件模板
+            //todo:问题，在哪里配置邮件？
             await _emailSender.QueueAsync(
                 user.Email,
                 "Your event registration has been received!",
